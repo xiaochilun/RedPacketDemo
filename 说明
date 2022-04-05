@@ -1,0 +1,19 @@
+红包的收发实现
+
+发送红包
+ChatSendRedPacketFragment.kt
+fragment_chat_red_packet_fragment.xml
+
+收取红包
+监听socket消息，在ChatRedPacketView.kt中处理
+ChatRedPacketView.kt
+view_chat_red_packet.xml
+
+抢红包
+ChatSnatchRedPacketDialog.kt
+dialog_chat_snatch_red_packet.xml
+SnatchRedPacketCountDownView.kt   圆形进度自定义View
+
+红包结果
+ChatRedPacketResultDialog.kt
+dialog_chat_red_packet_result.xml
