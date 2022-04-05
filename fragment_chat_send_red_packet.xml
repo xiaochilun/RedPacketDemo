@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_red_packet_chat">
+
+        <!-- 红包金额 -->
+        <View
+            android:id="@+id/rectSendAmount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_red_packet_input"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/tvRedPacketAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="红包金额"
+            android:textColor="#e0ffffff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/rectSendAmount"
+            app:layout_constraintTop_toTopOf="@id/rectSendAmount"
+            app:layout_constraintBottom_toBottomOf="@id/rectSendAmount"
+            android:layout_marginStart="12dp"/>
+
+        <EditText
+            android:id="@+id/etRedPacketAmount"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="100"
+            android:textColorHint="#4dffffff"
+            android:textColor="#E0FFFFFF"
+            android:textSize="14sp"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="@id/rectSendAmount"
+            app:layout_constraintBottom_toBottomOf="@id/rectSendAmount"
+            app:layout_constraintStart_toEndOf="@id/tvRedPacketAmount"
+            app:layout_constraintEnd_toStartOf="@id/unitRedPacket"
+            android:gravity="end|center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="8dp"
+            app:layout_goneMarginEnd="4dp"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/unitRedPacket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蜂蜜"
+            android:textColor="#e0ffffff"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/rectSendAmount"
+            app:layout_constraintBottom_toBottomOf="@id/rectSendAmount"
+            app:layout_constraintEnd_toEndOf="@id/rectSendAmount"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- 全服通知 -->
+        <View
+            android:id="@+id/rbAllRoomNotify"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/selector_common_select_check_button"
+            app:layout_constraintTop_toTopOf="@id/titleAllRoomNotify"
+            app:layout_constraintBottom_toBottomOf="@id/titleAllRoomNotify"
+            app:layout_constraintStart_toStartOf="@id/rectSendAmount"
+            />
+
+        <TextView
+            android:id="@+id/titleAllRoomNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/rectSendAmount"
+            app:layout_constraintStart_toEndOf="@id/rbAllRoomNotify"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:text="全服通知"
+            android:textColor="#66ffffff"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/desAllRoomNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="发送红包金额大于100蜂蜜可触发全服通知"
+            android:textColor="#66ffffff"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@id/titleAllRoomNotify"
+            app:layout_constraintBottom_toBottomOf="@id/titleAllRoomNotify"
+            app:layout_constraintEnd_toEndOf="@id/rectSendAmount"/>
+
+        <!-- 红包数量 -->
+        <View
+            android:id="@+id/rectRedPacketCount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_red_packet_input"
+            app:layout_constraintTop_toBottomOf="@id/titleAllRoomNotify"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/tvRedPacketCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红包数量"
+            android:textColor="#e0ffffff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/rectRedPacketCount"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCount"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCount"
+            android:layout_marginStart="12dp"/>
+
+        <EditText
+            android:id="@+id/etRedPacketCount"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="请输入个数"
+            android:textColorHint="#4dffffff"
+            android:textColor="#E0FFFFFF"
+            android:textSize="14sp"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCount"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCount"
+            app:layout_constraintStart_toEndOf="@id/tvRedPacketCount"
+            app:layout_constraintEnd_toEndOf="@id/rectRedPacketCount"
+            android:gravity="end|center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="30dp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个"
+            android:textColor="#e0ffffff"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCount"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCount"
+            app:layout_constraintEnd_toEndOf="@id/rectRedPacketCount"
+            android:layout_marginEnd="12dp"/>
+
+        <!-- 红包倒计时 -->
+        <View
+            android:id="@+id/rectRedPacketCountDown"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_red_packet_input"
+            app:layout_constraintTop_toBottomOf="@id/rectRedPacketCount"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红包倒计时"
+            android:textColor="#e0ffffff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/rectRedPacketCountDown"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCountDown"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCountDown"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:id="@+id/tvRedPacketCountDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="立即发送"
+            android:textColor="#e0ffffff"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/rectRedPacketCountDown"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCountDown"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCountDown"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/icon_arrow_right_gray"
+            app:layout_constraintTop_toTopOf="@id/rectRedPacketCountDown"
+            app:layout_constraintBottom_toBottomOf="@id/rectRedPacketCountDown"
+            app:layout_constraintEnd_toEndOf="@id/rectRedPacketCountDown"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- 抢红包条件 -->
+        <TextView
+            android:id="@+id/titleCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抢红包条件"
+            android:textColor="#66ffffff"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/rectRedPacketCountDown"
+            app:layout_constraintStart_toStartOf="@id/rectRedPacketCountDown"
+            android:layout_marginTop="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/titleCondition"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none"/>
+
+        <EditText
+            android:id="@+id/etTargetMessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@id/listCondition"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_red_packet_input"
+            android:hint="输入指定公屏消息内容（最多15个字）"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#4dFFFFFF"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <com.daofeng.chatroom.mvvm.roomactivityrank.DinAlternateBoldTextView
+            android:id="@+id/tvPayMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="74dp"
+            android:layout_marginBottom="8dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/listCondition"
+            app:layout_constraintBottom_toTopOf="@id/tvRedPacketRate"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvMoneyUnit"/>
+
+        <TextView
+            android:id="@+id/tvMoneyUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蜂蜜"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvPayMoney"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvPayMoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:id="@+id/tvRedPacketRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红包需额外实付0.00元服务费(费率5%)"
+            android:textColor="#66ffffff"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btSendRedPacket"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btSendRedPacket"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/shape_send_red_packet"
+            android:gravity="center"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="发送红包"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/icHoney"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/icon_honey_gold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btSendRedPacket"
+            app:layout_constraintBottom_toBottomOf="@id/btSendRedPacket"
+            android:layout_marginStart="16dp"/>
+
+        <com.daofeng.chatroom.mvvm.roomactivityrank.DinAlternateBoldTextView
+            android:id="@+id/tvBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9999"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/icHoney"
+            app:layout_constraintTop_toTopOf="@id/btSendRedPacket"
+            app:layout_constraintBottom_toBottomOf="@id/btSendRedPacket"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:id="@+id/tvRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值"
+            android:textColor="#ff1fdbc2"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/tvBalance"
+            app:layout_constraintTop_toTopOf="@id/btSendRedPacket"
+            app:layout_constraintBottom_toBottomOf="@id/btSendRedPacket"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/arrowCharge"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/chat_room_arrow_right_primary"
+            app:layout_constraintStart_toEndOf="@id/tvRecharge"
+            app:layout_constraintTop_toTopOf="@id/btSendRedPacket"
+            app:layout_constraintBottom_toBottomOf="@id/btSendRedPacket"
+            android:layout_marginStart="2dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
